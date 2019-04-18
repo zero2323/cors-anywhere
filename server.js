@@ -26,7 +26,8 @@ cors_proxy.createServer({
   requireHeader: [],
   setHeaders  : {
         "Access-Control-Expose-Headers": "ETag",
-        "host": "https://www.rapidvideo.com"
+        "host": "https://www.rapidvideo.com",
+        "Referer": "https://animespire.com/embed/aHR0cHM6Ly93d3cucmFwaWR2aWRlby5jb20vZS9HMjYyN0VRN1d"
   },
   checkRateLimit: checkRateLimit,
   removeHeaders: [
