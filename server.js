@@ -25,6 +25,7 @@ cors_proxy.createServer({
   originWhitelist: originWhitelist,
   requireHeader: [],
   setHeaders  : {
+        "Host": "vd79.mycdn.me",
         "Referer": "https://ok.ru/",
         "Origin": "https://ok.ru",
         "X-Requested-With": "XMLHttpRequest",
