@@ -25,8 +25,6 @@ cors_proxy.createServer({
   originWhitelist: originWhitelist,
   requireHeader: [],
   setHeaders  : {
-        "Access-Control-Expose-Headers": "ETag",
-        "host": "https://www.rapidvideo.com",
         "Referer": "https://ok.ru/",
         "Origin": "https://ok.ru"
   },
