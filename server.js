@@ -29,6 +29,13 @@ cors_proxy.createServer({
         "referer": "https://ok.ru/",
         "origin": "https://ok.ru",
         "X-Requested-With": "XMLHttpRequest",
+        "Access-Control-Allow-Origin": "http://127.0.0.1",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range",
+        "Access-Control-Expose-Headers": "Content-Length,Content-Range",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Max-Age": 3600,
+    
   },
   checkRateLimit: checkRateLimit,
   removeHeaders: [
