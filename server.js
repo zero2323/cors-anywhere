@@ -28,7 +28,8 @@ cors_proxy.createServer({
         "host": "vd79.mycdn.me",
         "referer": "https://ok.ru/",
         "origin": "https://ok.ru",
-        "X-Requested-With": "XMLHttpRequest",   
+        "X-Requested-With": "XMLHttpRequest", 
+        "user-agent": "Mozilla/5.0 (Maemo; Linux armv7l; rv:10.0) Gecko/20100101 Firefox/10.0 Fennec/10.0",
   },
   checkRateLimit: checkRateLimit,
   removeHeaders: [
