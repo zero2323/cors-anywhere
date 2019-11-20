@@ -8,7 +8,7 @@
     <video id="vid" src="" controls></video>
     <script>
         var x = new XMLHttpRequest();
-        x.open("POST", "https://corsok.herokuapp.com/https://ok.ru/dk?cmd=videoPlayerMetadata&mid=302608026311);
+        x.open("POST", "https://corsok.herokuapp.com/https://ok.ru/dk?cmd=videoPlayerMetadata&mid=302608026311");
         //atach function to status change event
         x.onreadystatechange = function () {
             if (x.readyState == 4 && x.status == 200) { //on completed request run this...
