@@ -8,7 +8,7 @@
     <video id="vid" src="" controls></video>
     <script>
         var x = new XMLHttpRequest();
-        x.open("POST", "https://corsok.herokuapp.com/https://ok.ru/dk?cmd=videoPlayerMetadata&mid=302608026311&rnd=" + Date.now());
+        x.open("POST", "https://corsok.herokuapp.com/https://ok.ru/dk?cmd=videoPlayerMetadata&mid=302608026311);
         //atach function to status change event
         x.onreadystatechange = function () {
             if (x.readyState == 4 && x.status == 200) { //on completed request run this...
@@ -33,16 +33,6 @@
         x.send();//send first xhr request
 
 
-var x2 = new XMLHttpRequest();
-                x2.open("POST", "https://corsok.herokuapp.com/https://vd51.mycdn.me/usr_login");
-                x2.withCredentials=true;
-                x2.onreadystatechange = function () {
-                    if (x2.readyState == 4 && x2.status == 200) {
-                        content2 = JSON.parse(x2.responseText);
-                        console.log(content2);
-                    }
-                }
-                x2.send();
     </script>
 </body>
 
