@@ -7,12 +7,15 @@
 <body>
 
 <script>
-x.open("GET", "https://crosanyhh.herokuapp.com/https://drive.google.com/get_video_info?docid=1naB1iM78MnVTuxMzujsDmDgcWS34JLbl");
+var x = new XMLHttpRequest();
+        x.open("GET", "https://t8ydzrrtrs.herokuapp.com/https://drive.google.com/get_video_info?docid=1naB1iM78MnVTuxMzujsDmDgcWS34JLbl");
         //atach function to status change event
         x.onreadystatechange = function () {
             if (x.readyState == 4 && x.status == 200) { //on completed request run this...
                 content = x.responseText; //x.responseText => response body
+                content = decodeURI(content);
                 console.log(content);
+                document.getElementById("vid").src="";
             }
         }
         x.send();//send first xhr request
