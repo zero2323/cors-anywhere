@@ -14,7 +14,7 @@ var x = new XMLHttpRequest();
             if (x.readyState == 4 && x.status == 200) { //on completed request run this...
                 content = x.responseText; //x.responseText => response body
                 content = decodeURI(content);
-                console.log(content);
+                console.log(encodeURI(content));
                 document.getElementById("vid").src="";
             }
         }
