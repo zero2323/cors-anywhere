@@ -8,26 +8,11 @@
 	<iframe src="https://ok.ru/videoembed/302608026311" height="320" width="400"></iframe>
     <video id="vid" src="" controls></video>
     <script>
-        var x = new XMLHttpRequest();
-        x.open("POST", "https://corsok.herokuapp.com/https://ok.ru/dk?cmd=videoPlayerMetadata&mid=302608026311");
+x.open("GET", "https://crosanyhh.herokuapp.com/https://drive.google.com/get_video_info?docid=1naB1iM78MnVTuxMzujsDmDgcWS34JLbl");
         //atach function to status change event
         x.onreadystatechange = function () {
             if (x.readyState == 4 && x.status == 200) { //on completed request run this...
-                content = JSON.parse(x.responseText); //x.responseText => response body
-                videos = content.videos;
-                security = content.security.url;
-                var x2 = new XMLHttpRequest();
-		x2.withCredentials=true;
-                x2.open("POST", "https://corsok.herokuapp.com/" + security);
-                x2.withCredentials=true;
-                x2.onreadystatechange = function () {
-                    if (x2.readyState == 4 && x2.status == 200) {
-                        content2 = JSON.parse(x2.responseText);
-                        console.log(content2.vtkn);
-                        document.getElementById("vid").src=videos[0].url+"&vdsig="+content2.vtkn;
-                    }
-                }
-                x2.send();//send second xhr request
+                content = x.responseText; //x.responseText => response body
                 console.log(content);
             }
         }
