@@ -25,10 +25,11 @@ cors_proxy.createServer({
   originWhitelist: originWhitelist,
   requireHeader: [],
   setHeaders  : {
-        "host": "drive.google.com",
+        "Origin": "https://vk.com",
         "user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0",
         "accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "TE":"Trailers",
+        "te":"Trailers",
+        "accept":"*/*",
   },
   checkRateLimit: checkRateLimit,
   removeHeaders: [
