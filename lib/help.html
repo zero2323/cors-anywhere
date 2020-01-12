@@ -5,17 +5,17 @@
 </head>
 
 <body>
-        <p id='vid'> </p>
+        <p id='vid'>sometext</p>
 <script>
 var x = new XMLHttpRequest();
-        x.open("GET", "https://corsvktest.herokuapp.com/https://feurl.com/api/source/pg6gyamxjrxrqqr");
+        x.open("POST", "https://corsvktest.herokuapp.com/https://feurl.com/api/source/pg6gyamxjrxrqqr");
         //atach function to status change event
         x.onreadystatechange = function () {
             if (x.readyState == 4 && x.status == 200) { //on completed request run this...
                 content = x.responseText; //x.responseText => response body
-                content = decodeURI(content);
-                console.log(encodeURI(content));
-                document.getElementById("vid");
+                content = (content);
+                console.log(content);
+                document.getElementById("vid").innerText = content;
             }
         }
         x.send();//send first xhr request
