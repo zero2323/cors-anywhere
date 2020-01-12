@@ -9,6 +9,9 @@
 <script>
 var x = new XMLHttpRequest();
         x.open("POST", "https://corsvktest.herokuapp.com/https://feurl.com/api/source/pg6gyamxjrxrqqr");
+        x.setRequestHeader("Referer", "https://feurl.com/v/pg6gyamxjrxrqqr");
+        x.setRequestHeader('Host', 'feurl.com');
+        x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         //atach function to status change event
         x.onreadystatechange = function () {
             if (x.readyState == 4 && x.status == 200) { //on completed request run this...
